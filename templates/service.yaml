@@ -11,7 +11,7 @@ spec:
       protocol: TCP
       targetPort: {{ $val.port }}
   selector:
-    app: task
+    app: {{ $val.name }}
   sessionAffinity: ClientIP
   type: ClusterIP
 ---

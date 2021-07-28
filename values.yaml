@@ -36,3 +36,9 @@ appService:
 # domain
 webDomain: "web.dev"
 gatewayDomain: "api.dev"
+
+# etcd
+etcd:
+  address: "127.0.0.1:2379"
+  username: ""
+  password: ""
