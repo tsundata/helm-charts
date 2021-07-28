@@ -80,3 +80,12 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+favorite:
+  drink: coffee
+  food: pizza
+pizzaToppings:
+  - mushrooms
+  - cheese
+  - peppers
+  - onions
