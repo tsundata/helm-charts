@@ -32,13 +32,3 @@ appService:
     port: 6009
   - name: task
     port: 6010
-
-# domain
-webDomain: "web.dev"
-gatewayDomain: "api.dev"
-
-# etcd
-etcd:
-  address: "127.0.0.1:2379"
-  username: ""
-  password: ""

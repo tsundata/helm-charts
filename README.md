@@ -18,3 +18,11 @@ To install the assistant chart:
 To uninstall the chart:
 
     helm delete my-assistant
+
+## val file
+
+- web.domain.val
+- gateway.domain.val
+- etcd.address.val
+- etcd.username.val
+- etcd.password.val

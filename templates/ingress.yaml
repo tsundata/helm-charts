@@ -5,7 +5,7 @@ metadata:
   namespace: {{ $.Chart.Name }}
 spec:
   rules:
-    - host: {{ $.Values.gatewayDomain }}
+    - host: {{ .Files.Get "gateway.domain.val" }}
       http:
         paths:
           - path: /
@@ -15,7 +15,7 @@ spec:
                 name: gateway
                 port:
                   number: 5000
-    - host: {{ $.Values.webDomain }}
+    - host: {{ .Files.Get "web.domain.val" }}
       http:
         paths:
           - path: /
@@ -27,6 +27,6 @@ spec:
                   number: 7000
   tls:
     - hosts:
-        - {{ $.Values.gatewayDomain }}
-        - {{ $.Values.webDomain }}
+        - {{ .Files.Get "gateway.domain.val" }}
+        - {{ .Files.Get "web.domain.val" }}
       secretName: {{ $.Chart.Name }}-tls
