@@ -1,0 +1,18 @@
+{{- range $i, $val := $.Values.appService }}
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: {{ $.Chart.Name }}
+  name: {{ $val.name }}
+spec:
+  ports:
+    - name: http
+      port: {{ $val.port }}
+      protocol: TCP
+      targetPort: {{ $val.port }}
+  selector:
+    app: task
+  sessionAffinity: ClientIP
+  type: ClusterIP
+---
+{{ end -}}

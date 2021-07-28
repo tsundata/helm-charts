@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  namespace: {{ $.Chart.Name }}
+spec:
+  rules:
+    - host: {{ $.Values.gatewayDomain }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gateway
+                port:
+                  number: 5000
+    - host: {{ $.Values.webDomain }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 7000
+  tls:
+    - hosts:
+        - {{ $.Values.gatewayDomain }}
+        - {{ $.Values.webDomain }}
+      secretName: {{ $.Chart.Name }}-tls
