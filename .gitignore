@@ -3,3 +3,6 @@
 .idea/
 *.tmproj
 .vscode/
+*.key
+*.pem
+values.yaml
