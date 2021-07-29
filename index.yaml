@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  assistant:
+  - apiVersion: v2
+    appVersion: 0.0.27
+    created: "2021-07-29T07:29:37.146846316Z"
+    description: Assistant Bot is a workflow engine for chatbot
+    digest: 74963ce667eed7779de3cdc12c11b8c20ff0e4e5df4a5ff258ee337c0208e3bb
+    name: assistant
+    type: application
+    urls:
+    - https://github.com/tsundata/helm-charts/releases/download/assistant-0.0.27/assistant-0.0.27.tgz
+    version: 0.0.27
+generated: "2021-07-29T07:29:36.913383323Z"
