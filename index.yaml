@@ -12,6 +12,16 @@ entries:
     - https://github.com/tsundata/helm-charts/releases/download/assistant-0.0.27/assistant-0.0.27.tgz
     version: 0.0.27
   - apiVersion: v2
+    appVersion: 0.0.27-2-g6d66b0c
+    created: "2021-07-29T09:26:23.993017727Z"
+    description: Assistant Bot is a workflow engine for chatbot
+    digest: 3e130136eac02eb48276de18a5841fd450618a2cbbbcb8adc00ddb4b92e48081
+    name: assistant
+    type: application
+    urls:
+    - https://github.com/tsundata/helm-charts/releases/download/assistant-0.0.27-2-g6d66b0c/assistant-0.0.27-2-g6d66b0c.tgz
+    version: 0.0.27-2-g6d66b0c
+  - apiVersion: v2
     appVersion: 0.0.27
     created: "2021-07-29T09:17:24.692708744Z"
     description: Assistant Bot is a workflow engine for chatbot
