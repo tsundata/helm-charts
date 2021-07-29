@@ -4,6 +4,6 @@ metadata:
   name: etcd-config
   namespace: {{ $.Chart.Name }}
 data:
-  etcd.address: {{ .Files.Get "etcd.address.val" }}
-  etcd.username: {{ .Files.Get "etcd.username.val" }}
-  etcd.password: {{ .Files.Get "etcd.password.val" }}
+  etcd.address: {{ .Values.etcd.address }}
+  etcd.username: {{ .Values.etcd.username }}
+  etcd.password: {{ .Values.etcd.password }}

@@ -49,3 +49,19 @@ appService:
   - name: task
     port: 6010
     replicaCount: 1
+
+# etcd config
+etcd:
+  address: ""
+  username: ""
+  password: ""
+
+# tls config
+tls:
+  crt: ""
+  key: ""
+
+# domain config
+domain:
+  gateway: ""
+  web: ""
