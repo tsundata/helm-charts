@@ -5,7 +5,7 @@ metadata:
   name: {{ $val.name }}
   namespace: {{ $.Chart.Name }}
 spec:
-  replicas: {{ $.Values.replicaCount }}
+  replicas: {{ $val.replicaCount }}
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -39,7 +39,9 @@ spec:
                 configMapKeyRef:
                   name: etcd-config
                   key: etcd.password
+          {{- if gt (int (toString ($val.port))) 0 }}
           ports:
             - containerPort: {{ $val.port }}
+          {{- end }}
 ---
 {{ end -}}

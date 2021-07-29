@@ -2,33 +2,50 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 1
-
 # app 
 appService:
+  - name: cron
+    port: 0
+    replicaCount: 1
+  - name: spider
+    port: 0
+    replicaCount: 1
   - name: gateway
     port: 5000
+    replicaCount: 1
   - name: web
     port: 7000
+    replicaCount: 1
   - name: chatbot
     port: 6000
+    replicaCount: 1
   - name: message
     port: 6001
+    replicaCount: 1
   - name: middle
     port: 6002
+    replicaCount: 1
   - name: workflow
     port: 6003
+    replicaCount: 1
   - name: user
     port: 6004
+    replicaCount: 1
   - name: subscribe
     port: 6005
+    replicaCount: 1
   - name: todo
     port: 6006
+    replicaCount: 1
   - name: finance
     port: 6007
+    replicaCount: 1
   - name: nlp
     port: 6008
+    replicaCount: 1
   - name: storage
     port: 6009
+    replicaCount: 1
   - name: task
     port: 6010
+    replicaCount: 1
