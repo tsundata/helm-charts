@@ -21,3 +21,9 @@
 .idea/
 *.tmproj
 .vscode/
+# Project
+*.val
+.github/
+*.tgz
+*.key
+*.pem
