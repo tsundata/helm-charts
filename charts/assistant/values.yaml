@@ -4,9 +4,6 @@
 
 # app 
 appService:
-  - name: cron
-    port: 0
-    replicaCount: 1
   - name: spider
     port: 0
     replicaCount: 1
@@ -48,6 +45,9 @@ appService:
     replicaCount: 1
   - name: task
     port: 6010
+    replicaCount: 1
+  - name: cron
+    port: 6011
     replicaCount: 1
 
 # etcd config
