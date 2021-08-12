@@ -31,9 +31,6 @@ appService:
   - name: user
     port: 6004
     replicaCount: 1
-  - name: subscribe
-    port: 6005
-    replicaCount: 1
   - name: todo
     port: 6006
     replicaCount: 1
