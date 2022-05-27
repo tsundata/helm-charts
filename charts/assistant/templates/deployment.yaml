@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: {{ $val.name }}
-          image: "ghcr.io/tsundata/{{ $val.name }}:v{{ $.Chart.AppVersion }}"
+          image: "ghcr.io/{{ $val.owner }}/{{ $val.name }}:v{{ if $val.version }}{{ $val.version }}{{ else }}{{ $.Chart.AppVersion }}{{ end }}"
           imagePullPolicy: Always
           env:
             - name: ETCD_ADDRESS
